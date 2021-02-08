@@ -1,0 +1,50 @@
+# DROP TABLE IF EXISTS users,cars,orders,roles,orders_cars;
+CREATE TABLE cars
+(
+    id       INT PRIMARY KEY AUTO_INCREMENT,
+    model    VARCHAR(50),
+    category VARCHAR(50),
+    state    VARCHAR(50),
+    places   INT
+);
+
+CREATE TABLE roles
+(
+    id      INT PRIMARY KEY AUTO_INCREMENT,
+    role    ENUM ('ADMIN', 'USER')
+);
+
+CREATE TABLE users
+(
+    id       INT PRIMARY KEY AUTO_INCREMENT,
+    login    VARCHAR(40) UNIQUE,
+    email    VARCHAR(100) UNIQUE,
+    name     VARCHAR(100),
+    surname  VARCHAR(100),
+    password VARCHAR(100),
+    role_id  INT,
+    FOREIGN KEY (role_id) references roles (id) ON DELETE CASCADE
+);
+
+CREATE TABLE orders
+(
+    id                 INT PRIMARY KEY AUTO_INCREMENT,
+    shippingAddress    VARCHAR(10),
+    destinationAddress VARCHAR(10),
+    numberOfPassengers INT,
+    categoryOfCar      VARCHAR(10),
+    date               DATE,
+    price              DECIMAL,
+    user_id            INT,
+    FOREIGN KEY (user_id) references users (id) on delete CASCADE
+);
+
+CREATE TABLE orders_cars
+(
+    car_id   INT,
+    order_id INT,
+    FOREIGN KEY (car_id) references cars (id) ON DELETE CASCADE,
+    FOREIGN KEY (order_id) references orders (id) ON DELETE CASCADE,
+    PRIMARY KEY (car_id, order_id)
+
+);

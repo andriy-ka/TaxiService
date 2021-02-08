@@ -1,0 +1,59 @@
+package andriy.kachur.service.implementation;
+
+import andriy.kachur.dao.implementation.AdminDaoImpl;
+import andriy.kachur.model.Order;
+import andriy.kachur.model.User;
+import andriy.kachur.service.AdminService;
+
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
+
+public class AdminServiceImpl implements AdminService {
+    private AdminDaoImpl adminDao = new AdminDaoImpl();
+
+    @Override
+    public List<Order> sortByDate(String order) throws SQLException {
+        return adminDao.sortByDate(order);
+    }
+
+    @Override
+    public List<Order> sortByPrice(String order) throws SQLException {
+        return adminDao.sortByPrice(order);
+    }
+
+    @Override
+    public List<Order> findOrdersByUser(User user) throws SQLException {
+        return adminDao.findOrdersByUser(user);
+    }
+
+    @Override
+    public List<Order> findOrdersByDate(Date date) {
+        return adminDao.findOrdersByDate(date);
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return adminDao.getUserById(id);
+    }
+
+    @Override
+    public void createUser(User user) throws SQLException {
+        adminDao.createUser(user);
+    }
+
+    @Override
+    public User getUser(String name, String password){
+        return adminDao.getUser(name, password);
+    }
+
+    @Override
+    public int getUserId(String login, String password) {
+        return adminDao.getUserId(login, password);
+    }
+
+    @Override
+    public String getRole(int role_id) {
+        return adminDao.getRole(role_id);
+    }
+}

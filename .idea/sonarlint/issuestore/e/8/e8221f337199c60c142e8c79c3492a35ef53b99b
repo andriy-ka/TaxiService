@@ -1,0 +1,11 @@
+
+]	java:S125"<This block of commented-out lines of code should be removed.(Ÿã¶ªúÿÿÿÿ8·±Ëóõ.
+]	java:S125"<This block of commented-out lines of code should be removed.(§£´Ôüÿÿÿÿ8•ËËõ.
+g
+java:S1128"JRemove this unused import 'andriy.kachur.dao.implementation.AdminDaoImpl'.(Áºƒ«8Äƒä–÷.
+U	java:S106""9Replace this use of System.out or System.err by a logger.(ÏÓ¿8Óœ»ë÷.
+X	java:S125#"<This block of commented-out lines of code should be removed.(”ˆªœ8Óœ»ë÷.
+X	java:S125"<This block of commented-out lines of code should be removed.(ú¡ÎŞ8Ş˜¨–÷.
+]	java:S125 "<This block of commented-out lines of code should be removed.(ÃÎœºıÿÿÿÿ8 »ºë÷.
+‹
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(Á¯¦ş8ûÛÄë÷.
