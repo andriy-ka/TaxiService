@@ -31,7 +31,7 @@ public class AdminDaoImpl implements AdminDao {
                 order.setNumberOfPassengers(resultSet.getInt(4));
                 order.setCategoryOfCar(resultSet.getString(5));
                 order.setDate(resultSet.getDate(6));
-                order.setPrice(resultSet.getDouble(7));
+                order.setPrice(resultSet.getBigDecimal(7));
                 orders.add(order);
             }
         }
@@ -56,7 +56,7 @@ public class AdminDaoImpl implements AdminDao {
                 order.setNumberOfPassengers(resultSet.getInt(4));
                 order.setCategoryOfCar(resultSet.getString(5));
                 order.setDate(resultSet.getDate(6));
-                order.setPrice(resultSet.getDouble(7));
+                order.setPrice(resultSet.getBigDecimal(7));
                 orders.add(order);
             }
         }

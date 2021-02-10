@@ -1,7 +1,10 @@
 
-~
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ƒäñê÷.
-~
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8õÓîë÷.
-r
-java:S4144"UUpdate this method so that its implementation is not identical to "doGet" on line 15.(üª¼í8õÓîë÷.
+ƒ
+java:S1989 "aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(õç³–øÿÿÿÿ8¸°ó˜ø.
+u
+java:S1989*"SHandle the following exception that could be thrown by "sendRedirect": IOException.(Ä§…Éıÿÿÿÿ8îÏ”ø.
+]	java:S125"<This block of commented-out lines of code should be removed.(×§Æ›üÿÿÿÿ8í¥ğ˜ø.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8‹¯û•ø.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8ëè¨—ø.

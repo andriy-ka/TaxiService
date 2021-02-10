@@ -31,7 +31,7 @@ public class AuthFilter implements Filter {
                 filterChain.doFilter(request, response);
             }
             //Если нет то на страницу входа.
-        }else response.sendRedirect(request.getContextPath() + "/login");
+        }else response.sendRedirect(request.getContextPath() + "login");
     }
 
     @Override

@@ -3,7 +3,7 @@ CREATE TABLE cars
 (
     id       INT PRIMARY KEY AUTO_INCREMENT,
     model    VARCHAR(50),
-    category VARCHAR(50),
+    category ENUM('Economy', 'Business'),
     state    VARCHAR(50),
     places   INT
 );
@@ -29,10 +29,10 @@ CREATE TABLE users
 CREATE TABLE orders
 (
     id                 INT PRIMARY KEY AUTO_INCREMENT,
-    shippingAddress    VARCHAR(10),
-    destinationAddress VARCHAR(10),
+    shippingAddress    VARCHAR(100),
+    destinationAddress VARCHAR(100),
     numberOfPassengers INT,
-    categoryOfCar      VARCHAR(10),
+    categoryOfCar      ENUM('Economy', 'Business'),
     date               DATE,
     price              DECIMAL,
     user_id            INT,

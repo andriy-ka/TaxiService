@@ -4,6 +4,9 @@
     <title>AdminHome</title>
 </head>
 <body>
-AdminHome
+<h1>Admin page</h1>
+<form action="home" method="post">
+    <input type="submit" name="logout" value="logout">
+</form>
 </body>
 </html>

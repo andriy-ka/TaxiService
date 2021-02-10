@@ -32,8 +32,10 @@ public class LoginServlet extends HttpServlet {
         int user_id = adminService.getUserId(login, password);
         if(user_id != 0) {
             User user = adminService.getUserById(user_id);
+            session.setAttribute("userId", user.getId());
             session.setAttribute("userName", login);
             session.setAttribute("userRole", adminService.getRole(user.getRole_id()));
+            session.setAttribute("password", password);
             if(adminService.getRole(user.getRole_id()).equals("USER")){
                 resp.sendRedirect("home");
             }

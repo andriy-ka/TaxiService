@@ -1,11 +1,15 @@
 package andriy.kachur.dao;
 
 import andriy.kachur.model.Order;
+import andriy.kachur.model.User;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public interface OrderDao {
 
-    void createOrder(Order order) throws SQLException;
+    List<Order> getAllUserOrders(User user);
+
+    void createOrder(Order order);
     Order getOrderById(int id) throws SQLException;
 }
