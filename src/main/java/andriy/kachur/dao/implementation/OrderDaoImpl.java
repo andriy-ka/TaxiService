@@ -38,7 +38,7 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public void createOrder(Order order){
         try (Connection con = dbManager.getConnection();
-             PreparedStatement statement = con.prepareStatement("INSERT INTO orders (shippingAddress, destinationAddress, numberOfPassengers, categoryOfCar, date, price, user_id) values (?,?,?,?,?,?,?)")) {
+             PreparedStatement statement = con.prepareStatement("INSERT INTO orders (shippingAddress, destinationAddress, numberOfPassengers, categoryOfCar, date, price, user_id, car_id) values (?,?,?,?,?,?,?,?)")) {
             statement.setString(1, order.getShippingAddress());
             statement.setString(2, order.getDestinationAddress());
             statement.setInt(3, order.getNumberOfPassengers());
@@ -46,6 +46,7 @@ public class OrderDaoImpl implements OrderDao {
             statement.setDate(5, order.getDate());
             statement.setBigDecimal(6, order.getPrice());
             statement.setInt(7, order.getUser_id());
+            statement.setInt(8, order.getCar_id());
             statement.executeUpdate();
         }
         catch (SQLException e) {

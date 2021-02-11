@@ -9,13 +9,13 @@
     <form action="home" method="post">
         <table>
             <tr>
-                <td>Shipping address</td>
+                <td>From </td>
                 <td>
                     <input type="text" name="shippingAddress" required>
                 </td>
             </tr>
             <tr>
-                <td>Destination address</td>
+                <td>To </td>
                 <td>
                     <input type="text" name="destinationAddress" required>
                 </td>

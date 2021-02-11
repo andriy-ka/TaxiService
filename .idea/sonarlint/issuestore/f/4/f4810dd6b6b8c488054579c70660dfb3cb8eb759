@@ -1,10 +1,14 @@
 
+u
+java:S1989)"SHandle the following exception that could be thrown by "sendRedirect": IOException.(Π§Άρύÿÿÿÿ8ω£υγχ.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©£•“ώÿÿÿÿ8§„γχ.
 ~
 java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ςψ½8–ΥΥ›χ.
+k
+java:S1192"IDefine a constant instead of duplicating this literal "password" 3 times.(…νέώÿÿÿÿ8²ψω.
+p
+java:S1989,"SHandle the following exception that could be thrown by "sendRedirect": IOException.(Ντ¶8Ωόγχ.
 u
-java:S1989("SHandle the following exception that could be thrown by "sendRedirect": IOException.(Π§Άρύÿÿÿÿ8ω£υγχ.
+java:S1989/"SHandle the following exception that could be thrown by "sendRedirect": IOException.(Δ§…Ιύÿÿÿÿ8“©ξω.
 O
 java:S1128"2Remove this unused import 'java.sql.SQLException'.(ΫοΖ8Ξÿ©γχ.
-r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©£•“ώÿÿÿÿ8§„γχ.
-p
-java:S1989+"SHandle the following exception that could be thrown by "sendRedirect": IOException.(Ντ¶8Ωόγχ.

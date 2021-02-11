@@ -59,3 +59,5 @@ e
 5src/main/java/andriy/kachur/service/OrderService.java,1\e\1eb98d7bc21e923c887e9a380cca8872983f28c3
 x
 Hsrc/main/java/andriy/kachur/service/implementation/OrderServiceImpl.java,2\4\24664a067777944d712c04015b691c0c473bd421
+Z
+*src/main/webapp/WEB-INF/views/newOrder.jsp,5\2\522080476dbf8d7d900c9de033b7983a67b40c45

@@ -1,5 +1,7 @@
 
 
-java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8ÏÏ”á÷.
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆıÿÿÿÿ8ÏÏ”á÷.
+java:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8ÏÏ”á÷.
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß¹¶¼8ÏÏ”á÷.
+R
+java:S1128"5Remove this unused import 'andriy.kachur.model.User'.(¹©Éé8Ï‡ºù.

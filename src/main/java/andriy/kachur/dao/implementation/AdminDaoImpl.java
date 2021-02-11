@@ -111,7 +111,7 @@ public class AdminDaoImpl implements AdminDao {
             }
         }catch (SQLException e){
             System.err.println("No such user");
-            return new User("0", "0", "0", "0", "0", 0);
+            return null;
         }
         return user;
     }
@@ -144,7 +144,7 @@ public class AdminDaoImpl implements AdminDao {
                 user.setPassword(resultSet.getString(6));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Can not get user with login = " + login + " and password = " + password);
         }
         return user.getId();
     }

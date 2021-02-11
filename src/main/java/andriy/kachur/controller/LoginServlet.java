@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
             User user = adminService.getUserById(user_id);
             session.setAttribute("userId", user.getId());
             session.setAttribute("userName", login);
+            session.setAttribute("name", user.getName());
             session.setAttribute("userRole", adminService.getRole(user.getRole_id()));
             session.setAttribute("password", password);
             if(adminService.getRole(user.getRole_id()).equals("USER")){
@@ -42,6 +43,13 @@ public class LoginServlet extends HttpServlet {
             if(adminService.getRole(user.getRole_id()).equals("ADMIN")){
                 resp.sendRedirect("adminHome");
             }
+        }else{
+            resp.sendRedirect("login");
+            session.setAttribute("userName", null);
+            session.setAttribute("password", null);
+            session.setAttribute("userRole", null);
+            session.setAttribute("userId", null);
+            session.setAttribute("name", null);
         }
     }
 }

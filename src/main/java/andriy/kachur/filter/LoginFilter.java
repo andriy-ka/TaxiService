@@ -1,5 +1,9 @@
 package andriy.kachur.filter;
 
+import andriy.kachur.model.User;
+import andriy.kachur.service.AdminService;
+import andriy.kachur.service.implementation.AdminServiceImpl;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -9,25 +13,31 @@ import java.io.IOException;
 
 @WebFilter("/*")
 public class LoginFilter implements Filter {
+    AdminService adminService = new AdminServiceImpl();
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
 
     }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        //получение данных сессии
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession(false);
-        //URL Запроса/переадресации на Servlet входа
+
         String loginURI = request.getContextPath() + "/login";
-        //Если сессия ранее создана
-        boolean loggedIn = session != null && session.getAttribute("userName") != null && session.getAttribute("userRole") != null;
+        String welcomeURI = request.getContextPath() + "/";
+        String registrationURI = request.getContextPath() + "/registration";
+        boolean loggedIn = false;
+        if(session != null && session.getAttribute("userName") != null && session.getAttribute("password") != null) {
+             loggedIn = adminService.getUser(session.getAttribute("userName").toString(), session.getAttribute("password").toString()) != null;
+        }
         boolean loginRequest = request.getRequestURI().equals(loginURI);
-        //Если запрос пришел со страницы с входом или сессия не пуста даем добро следовать дальше
-        //Если нет ридерект на страницу входа
-        if (loggedIn || loginRequest) {
+        boolean welcomeRequest = request.getRequestURI().equals(welcomeURI);
+        boolean registrationRequest = request.getRequestURI().equals(registrationURI);
+
+
+        if (loggedIn || loginRequest || welcomeRequest || registrationRequest) {
             filterChain.doFilter(request, response);
         } else {
             response.sendRedirect(loginURI);

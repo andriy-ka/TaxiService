@@ -1,20 +1,20 @@
-# DROP TABLE IF EXISTS users,cars,orders,roles,orders_cars;
-CREATE TABLE cars
+# DROP TABLE IF EXISTS orders, orders_cars;
+CREATE TABLE IF NOT EXISTS cars
 (
     id       INT PRIMARY KEY AUTO_INCREMENT,
     model    VARCHAR(50),
     category ENUM('Economy', 'Business'),
-    state    VARCHAR(50),
+    state    ENUM('AVAILABLE','IN THE WAY','INACTIVE'),
     places   INT
 );
 
-CREATE TABLE roles
+CREATE TABLE IF NOT EXISTS roles
 (
     id      INT PRIMARY KEY AUTO_INCREMENT,
     role    ENUM ('ADMIN', 'USER')
 );
 
-CREATE TABLE users
+CREATE TABLE IF NOT EXISTS users
 (
     id       INT PRIMARY KEY AUTO_INCREMENT,
     login    VARCHAR(40) UNIQUE,
@@ -26,7 +26,7 @@ CREATE TABLE users
     FOREIGN KEY (role_id) references roles (id) ON DELETE CASCADE
 );
 
-CREATE TABLE orders
+CREATE TABLE IF NOT EXISTS orders
 (
     id                 INT PRIMARY KEY AUTO_INCREMENT,
     shippingAddress    VARCHAR(100),
@@ -36,15 +36,7 @@ CREATE TABLE orders
     date               DATE,
     price              DECIMAL,
     user_id            INT,
-    FOREIGN KEY (user_id) references users (id) on delete CASCADE
-);
-
-CREATE TABLE orders_cars
-(
-    car_id   INT,
-    order_id INT,
-    FOREIGN KEY (car_id) references cars (id) ON DELETE CASCADE,
-    FOREIGN KEY (order_id) references orders (id) ON DELETE CASCADE,
-    PRIMARY KEY (car_id, order_id)
-
+    car_id             INT,
+    FOREIGN KEY (user_id) references users (id) on delete CASCADE,
+    FOREIGN KEY (car_id) references cars (id) on delete CASCADE
 );

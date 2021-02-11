@@ -6,12 +6,12 @@
     <title>Welcome Home!</title>
 </head>
 <body>
-<h1>Welcome ${requestScope.userName}!</h1>
+<h1>Welcome ${requestScope.name}!</h1>
 <table border="1">
     <thead>
     <tr>
-        <th>Shipping Address</th>
-        <th>Destination Address</th>
+        <th>From </th>
+        <th>To </th>
         <th>Passengers</th>
         <th>Category</th>
         <th>Date</th>

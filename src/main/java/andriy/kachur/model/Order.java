@@ -1,8 +1,8 @@
 package andriy.kachur.model;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.sql.Time;
-import java.util.Date;
 
 public class Order {
     private int id;
@@ -13,9 +13,21 @@ public class Order {
     private java.sql.Date date;
     private BigDecimal price;
     private int user_id;
+    private int car_id;
 
 
     public Order() {
+    }
+
+    public Order(String shippingAddress, String destinationAddress, int numberOfPassengers, String categoryOfCar, Date date, BigDecimal price, int user_id, int car_id) {
+        this.shippingAddress = shippingAddress;
+        this.destinationAddress = destinationAddress;
+        this.numberOfPassengers = numberOfPassengers;
+        this.categoryOfCar = categoryOfCar;
+        this.date = date;
+        this.price = price;
+        this.user_id = user_id;
+        this.car_id = car_id;
     }
 
     public Order(String shippingAddress, String destinationAddress, int numberOfPassengers, String categoryOfCar, java.sql.Date date, BigDecimal price, int user_id) {
@@ -38,8 +50,17 @@ public class Order {
                 ", categoryOfCar='" + categoryOfCar + '\'' +
                 ", date=" + date +
                 ", price=" + price +
-                ", user_id='" + user_id + '\'' +
+                ", user_id=" + user_id +
+                ", car_id=" + car_id +
                 '}';
+    }
+
+    public int getCar_id() {
+        return car_id;
+    }
+
+    public void setCar_id(int car_id) {
+        this.car_id = car_id;
     }
 
     public int getUser_id() {

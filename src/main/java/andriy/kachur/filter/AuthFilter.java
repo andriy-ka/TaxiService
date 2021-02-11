@@ -20,17 +20,14 @@ public class AuthFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession(false);
 
-        //Существует ли сессиия
         boolean loggedIn = session != null && session.getAttribute("userName") != null && session.getAttribute("userRole") != null;
         if (loggedIn ){
-            //Если существует то получаем роль
             String userRole = session.getAttribute("userRole").toString();
             if (userRole.equals("USER")){
                 response.sendRedirect(request.getContextPath() + "home");
             }else if (userRole.equals("ADMIN")){
                 filterChain.doFilter(request, response);
             }
-            //Если нет то на страницу входа.
         }else response.sendRedirect(request.getContextPath() + "login");
     }
 
