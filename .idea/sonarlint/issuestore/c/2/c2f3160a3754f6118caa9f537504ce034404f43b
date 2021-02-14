@@ -1,4 +1,4 @@
 
-Z	java:S1064"9Replace this use of System.out or System.err by a logger.(©Ó–ñþÿÿÿÿ8ñ¤•äø.
-]	java:S125L"<This block of commented-out lines of code should be removed.(í½íÿýÿÿÿÿ8×è‰–ø.
-Z	java:S106!"9Replace this use of System.out or System.err by a logger.(§Ì±øüÿÿÿÿ8âÀ€•ø.
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(§Ì±øüÿÿÿÿ8ü¼±ßù.
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(€î‰½8ü¼±ßù.
+Z	java:S106M"9Replace this use of System.out or System.err by a logger.(©Ó–ñþÿÿÿÿ8ü¼±ßù.

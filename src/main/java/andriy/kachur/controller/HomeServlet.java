@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet("/home")
@@ -51,13 +51,26 @@ public class HomeServlet extends HttpServlet {
             order.setNumberOfPassengers(Integer.parseInt(req.getParameter("passengers")));
             order.setCategoryOfCar(req.getParameter("category"));
 
-            order.setDate(new java.sql.Date(Calendar.getInstance().getTime().getTime()));
 
+            if(carService.numberCarsByCreteriaForOrder(order, "places") == 0){
+                req.setAttribute("numberOfCarByPlaces", 0);
+                getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
+            }
+            if(carService.numberCarsByCreteriaForOrder(order, "category") == 0){
+                req.setAttribute("numberOfCarByCategory", 0);
+                getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
+            }
+            order.setDate(new Date());
             order.setPrice(BigDecimal.valueOf(12.43));
             order.setUser_id(adminService.getUserId(req.getSession().getAttribute("userName").toString(), req.getSession().getAttribute("password").toString()));
+            int car_id = carService.getCarForOrder(order).getId();
+            if(car_id != 0){
+                order.setCar_id(carService.getCarForOrder(order).getId());
+            }else{
+                req.setAttribute("car_id", 0);
+                getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
+            }
 
-            order.setCar_id(carService.getCarForOrder(order).getId());
-            carService.updateCarState(carService.getCarForOrder(order), "IN THE WAY");
             orderService.createOrder(order);
             resp.sendRedirect("home");
         }

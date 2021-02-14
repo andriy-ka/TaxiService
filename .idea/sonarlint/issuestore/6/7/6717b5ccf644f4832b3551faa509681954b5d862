@@ -1,10 +1,12 @@
 
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ïÂÙãø.
-s	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÖïéÿÿÿÿÿ8Ïìš÷.
-L
-java:S1128"*Remove this unused import 'java.sql.Time'.(Üå»‰şÿÿÿÿ8…¡¼ãø.
-j	java:S100-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨şšş8×„Üâø.
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìŸ±—8Ù¡îš÷.
-o	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅ®Šüÿÿÿÿ8×„Üâø.
-r	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅ®Šüÿÿÿÿ8×„Üâø.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®§šœşÿÿÿÿ8ƒùû’ù.
+o	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¾™•úÿÿÿÿ8¢²ú’ù.
+s	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÖïéÿÿÿÿÿ8Ïìš÷.
+j	java:S1007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨şšş8×„Üâø.
+r	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅ®Šüÿÿÿÿ8×„Üâø.
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î¿¿8¢²ú’ù.
+b	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(®§šœşÿÿÿÿ8ƒùû’ù.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®§šœşÿÿÿÿ8ƒùû’ù.
+j	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î¿¿8¢²ú’ù.
+m	java:S116"QRename this field "car_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¤Œì8²éù’ù.
+o	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅ®Šüÿÿÿÿ8×„Üâø.

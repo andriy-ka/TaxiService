@@ -27,7 +27,7 @@
     </schema>
     <schema id="8" parent="1" name="tsdb">
       <Current>1</Current>
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="9" parent="1" name="world">
       <Collation>utf8mb4_0900_ai_ci</Collation>
@@ -920,10 +920,16 @@ SELECT|sys.sys_config
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,RELOAD,SHUTDOWN,PROCESS,FILE,REFERENCES,INDEX,ALTER,SHOW DATABASES,SUPER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,REPLICATION SLAVE,REPLICATION CLIENT,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,CREATE USER,EVENT,TRIGGER,CREATE TABLESPACE,CREATE ROLE,DROP ROLE!
 </ObjectGrants>
     </user>
-    <table id="287" parent="8" name="cars"/>
+    <table id="287" parent="8" name="cars">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </table>
     <table id="288" parent="8" name="orders"/>
-    <table id="289" parent="8" name="roles"/>
-    <table id="290" parent="8" name="users"/>
+    <table id="289" parent="8" name="roles">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </table>
+    <table id="290" parent="8" name="users">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </table>
     <column id="291" parent="287" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
@@ -940,7 +946,7 @@ SELECT|sys.sys_config
     </column>
     <column id="294" parent="287" name="state">
       <Position>4</Position>
-      <DataType>enum(&apos;AVAILABLE&apos;, &apos;IN THE WAY&apos;, &apos;INACTIVE&apos;)|0e</DataType>
+      <DataType>enum(&apos;AVAILABLE&apos;, &apos;UNAVAILABLE&apos;)|0e</DataType>
       <DefaultExpression>&apos;AVAILABLE&apos;</DefaultExpression>
     </column>
     <column id="295" parent="287" name="places">
@@ -976,7 +982,7 @@ SELECT|sys.sys_config
     </column>
     <column id="302" parent="288" name="date">
       <Position>6</Position>
-      <DataType>date|0s</DataType>
+      <DataType>datetime|0s</DataType>
     </column>
     <column id="303" parent="288" name="price">
       <Position>7</Position>

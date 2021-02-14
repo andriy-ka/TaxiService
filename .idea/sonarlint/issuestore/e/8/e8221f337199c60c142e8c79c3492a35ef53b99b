@@ -1,12 +1,7 @@
 
-g
-java:S1128"JRemove this unused import 'andriy.kachur.dao.implementation.AdminDaoImpl'.(Áºƒ«8Äƒä–÷.
-]	java:S125"<This block of commented-out lines of code should be removed.(ÔÝÎÀûÿÿÿÿ8 ´îãø.
-]	java:S125""<This block of commented-out lines of code should be removed.(Ÿã¶ªúÿÿÿÿ8·±Ëóõ.
-X	java:S125"<This block of commented-out lines of code should be removed.(×¼™¦8Çêîãø.
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8‘¬öãø.
-‹
-java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(Á¯¦þ8”‘º‚ù.
-]	java:S125,"<This block of commented-out lines of code should be removed.(ˆÎÑÄùÿÿÿÿ8Æ”—ø.
-]	java:S125&"<This block of commented-out lines of code should be removed.(§£´Ôüÿÿÿÿ8•ËËõ.
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(ß«“žþÿÿÿÿ8üÛµßù.
+`
+java:S1128"CRemove this unused import 'org.apache.http.client.utils.DateUtils'.(ªÈÙ€8«ÑïÞù.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(éâ¢äúÿÿÿÿ8üˆßáù.
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(«šÜ¨ûÿÿÿÿ8üˆßáù.
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(·‘Ž¡þÿÿÿÿ8üˆßáù.

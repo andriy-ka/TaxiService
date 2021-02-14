@@ -1,8 +1,7 @@
 package andriy.kachur.model;
 
 import java.math.BigDecimal;
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 
 public class Order {
     private int id;
@@ -10,7 +9,7 @@ public class Order {
     private String destinationAddress;
     private int numberOfPassengers;
     private String categoryOfCar;
-    private java.sql.Date date;
+    private Date date;
     private BigDecimal price;
     private int user_id;
     private int car_id;
@@ -28,16 +27,6 @@ public class Order {
         this.price = price;
         this.user_id = user_id;
         this.car_id = car_id;
-    }
-
-    public Order(String shippingAddress, String destinationAddress, int numberOfPassengers, String categoryOfCar, java.sql.Date date, BigDecimal price, int user_id) {
-        this.shippingAddress = shippingAddress;
-        this.destinationAddress = destinationAddress;
-        this.numberOfPassengers = numberOfPassengers;
-        this.categoryOfCar = categoryOfCar;
-        this.date = date;
-        this.price = price;
-        this.user_id = user_id;
     }
 
     @Override
@@ -79,11 +68,11 @@ public class Order {
         this.price = price;
     }
 
-    public void setDate(java.sql.Date date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public java.sql.Date getDate() {
+    public Date getDate() {
         return date;
     }
 

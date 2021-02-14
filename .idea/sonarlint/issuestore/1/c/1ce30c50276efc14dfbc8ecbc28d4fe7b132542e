@@ -1,15 +1,15 @@
 
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8ëè¨—ø.
-G
-java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê8áÊãø.
-~
-java:S1989$"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8¼£´áø.
-T
-java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8¯¤éãø.
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8‹¯û•ø.
-O
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8Øá”äø.
 ‡
-java:S1989)"jHandle the following exceptions that could be thrown by "buttonController": IOException, ServletException.(¬¶á8™‡²ù.
+java:S1989*"jHandle the following exceptions that could be thrown by "buttonController": IOException, ServletException.(¬¶á8›¾‰“ù.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8›¾‰“ù.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8›¾‰“ù.
+r	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¤şüÿÿÿÿ8Çİµ¸ù.
+]
+java:S1128
+";Remove this unused import 'com.google.maps.GeolocationApi'.(Î¯î…ÿÿÿÿÿ8ÍÖ¨Úù.
+u
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÆÎã‰8›¾‰“ù.
+~
+java:S1989%"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8›¾‰“ù.

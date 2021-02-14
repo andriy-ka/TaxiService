@@ -2,6 +2,7 @@ package andriy.kachur.dao.implementation;
 
 import andriy.kachur.config.DBManager;
 import andriy.kachur.dao.OrderDao;
+import andriy.kachur.model.Car;
 import andriy.kachur.model.Order;
 import andriy.kachur.model.User;
 
@@ -17,20 +18,43 @@ public class OrderDaoImpl implements OrderDao {
         List<Order> orders = new ArrayList<>();
         try (Connection con = dbManager.getConnection();
              Statement statement = con.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where user_id = '" + user.getId() + "';")) {
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where user_id = '" + user.getId() + "' ORDER BY date DESC ;")) {
             while (resultSet.next()) {
                 Order order = new Order();
                 order.setShippingAddress(resultSet.getString(2));
                 order.setDestinationAddress(resultSet.getString(3));
                 order.setNumberOfPassengers(resultSet.getInt(4));
                 order.setCategoryOfCar(resultSet.getString(5));
-                order.setDate(resultSet.getDate(6));
+                order.setDate(resultSet.getTimestamp(6));
                 order.setPrice(resultSet.getBigDecimal(7));
                 orders.add(order);
 
             }
         } catch (SQLException e) {
             System.err.println("No orders for user = " + user.getLogin());
+        }
+        return orders;
+    }
+
+    @Override
+    public List<Order> getAllCarOrders(Car car){
+        List<Order> orders = new ArrayList<>();
+        try (Connection con = dbManager.getConnection();
+             Statement statement = con.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where car_id = '" + car.getId() + "';")) {
+            while (resultSet.next()) {
+                Order order = new Order();
+                order.setId(resultSet.getInt(1));
+                order.setShippingAddress(resultSet.getString(2));
+                order.setDestinationAddress(resultSet.getString(3));
+                order.setNumberOfPassengers(resultSet.getInt(4));
+                order.setCategoryOfCar(resultSet.getString(5));
+                order.setDate(resultSet.getTimestamp(6));
+                order.setPrice(resultSet.getBigDecimal(7));
+                orders.add(order);
+            }
+        } catch (SQLException e) {
+            System.err.println("No orders for user = " + car.getId());
         }
         return orders;
     }
@@ -43,7 +67,7 @@ public class OrderDaoImpl implements OrderDao {
             statement.setString(2, order.getDestinationAddress());
             statement.setInt(3, order.getNumberOfPassengers());
             statement.setString(4, order.getCategoryOfCar());
-            statement.setDate(5, order.getDate());
+            statement.setObject(5, new java.sql.Timestamp(order.getDate().getTime()));
             statement.setBigDecimal(6, order.getPrice());
             statement.setInt(7, order.getUser_id());
             statement.setInt(8, order.getCar_id());
@@ -73,13 +97,4 @@ public class OrderDaoImpl implements OrderDao {
         return order;
     }
 
-    public void setOrderForUser(User user, Order order) throws SQLException {
-//        try (Connection con = dbManager.getConnection();
-//             PreparedStatement statement = con.prepareStatement("INSERT INTO users_orders (user_id, order_id) values (?, ?)")) {
-//            statement.setInt(1, user.getId());
-//            statement.setInt(2, order.getId());
-//            statement.executeUpdate();
-//        }
-
-    }
 }
