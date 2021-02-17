@@ -8,10 +8,6 @@ import java.util.Date;
 import java.util.List;
 
 public interface AdminDao {
-    List<Order> sortByDate(String order) throws SQLException;
-    List<Order> sortByPrice(String order) throws SQLException;
-    List<Order> findOrdersByUser(User user) throws SQLException;
-    List<Order> findOrdersByDate(Date date);
     User getUserById(int id) throws SQLException;
     User getUser(String name, String password) throws SQLException;
 
@@ -20,4 +16,6 @@ public interface AdminDao {
     void createUser(User user) throws SQLException;
 
     String getRole(int role_id);
+
+    User getUser(String login);
 }

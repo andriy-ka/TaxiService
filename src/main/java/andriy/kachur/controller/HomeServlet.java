@@ -1,5 +1,6 @@
 package andriy.kachur.controller;
 
+import andriy.kachur.model.City;
 import andriy.kachur.model.Order;
 import andriy.kachur.service.AdminService;
 import andriy.kachur.service.CarService;
@@ -46,11 +47,13 @@ public class HomeServlet extends HttpServlet {
     private void buttonController(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         if (req.getParameter("submitOrder") != null) {
             Order order = new Order();
+            City shippingCity = orderService.getCityByName(req.getParameter("shippingAddress"));
+            City destinationAddress = orderService.getCityByName(req.getParameter("destinationAddress"));
+
             order.setShippingAddress(req.getParameter("shippingAddress"));
             order.setDestinationAddress(req.getParameter("destinationAddress"));
             order.setNumberOfPassengers(Integer.parseInt(req.getParameter("passengers")));
             order.setCategoryOfCar(req.getParameter("category"));
-
 
             if(carService.numberCarsByCreteriaForOrder(order, "places") == 0){
                 req.setAttribute("numberOfCarByPlaces", 0);
@@ -60,8 +63,15 @@ public class HomeServlet extends HttpServlet {
                 req.setAttribute("numberOfCarByCategory", 0);
                 getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
             }
+
             order.setDate(new Date());
-            order.setPrice(BigDecimal.valueOf(12.43));
+
+            if(req.getParameter("category").equals("Economy")) {
+                order.setPrice(BigDecimal.valueOf(5.5 * orderService.distance(shippingCity.getLatitude(), shippingCity.getLongitude(), destinationAddress.getLatitude(), destinationAddress.getLongitude())));
+            }else if(req.getParameter("category").equals("Business")){
+                order.setPrice(BigDecimal.valueOf(8 * orderService.distance(shippingCity.getLatitude(), shippingCity.getLongitude(), destinationAddress.getLatitude(), destinationAddress.getLongitude())));
+            }
+
             order.setUser_id(adminService.getUserId(req.getSession().getAttribute("userName").toString(), req.getSession().getAttribute("password").toString()));
             int car_id = carService.getCarForOrder(order).getId();
             if(car_id != 0){
@@ -75,6 +85,7 @@ public class HomeServlet extends HttpServlet {
             resp.sendRedirect("home");
         }
         if (req.getParameter("newOrder") != null) {
+            req.setAttribute("cities", orderService.getAllCities());
             getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
         }
         if (req.getParameter("logout") != null) {

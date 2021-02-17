@@ -1,15 +1,14 @@
 
+r	java:S117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¤şüÿÿÿÿ8Çİµ¸ù.
 ‡
-java:S1989*"jHandle the following exceptions that could be thrown by "buttonController": IOException, ServletException.(¬¶á8›¾‰“ù.
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8›¾‰“ù.
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8›¾‰“ù.
-r	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¤şüÿÿÿÿ8Çİµ¸ù.
-]
-java:S1128
-";Remove this unused import 'com.google.maps.GeolocationApi'.(Î¯î…ÿÿÿÿÿ8ÍÖ¨Úù.
+java:S1989)"jHandle the following exceptions that could be thrown by "buttonController": IOException, ServletException.(¬¶á8›¾‰“ù.
 u
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÆÎã‰8›¾‰“ù.
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÆÎã‰8›¾‰“ù.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8›¾‰“ù.
 ~
-java:S1989%"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8›¾‰“ù.
+java:S1989$"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8›¾‰“ù.
+~
+java:S11929"\Define a constant instead of duplicating this literal "/WEB-INF/views/newOrder.jsp" 4 times.(üØÀöùÿÿÿÿ8Ê«ÿù.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8›¾‰“ù.

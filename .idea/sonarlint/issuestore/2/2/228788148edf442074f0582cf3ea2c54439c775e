@@ -1,2 +1,8 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¢†8•Ûéã÷.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¢†8•Ûéã÷.
+S
+java:S1128"6Remove this unused import 'andriy.kachur.model.Order'.(¯Ä¾8õÀ†ú.
+H
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8õÀ†ú.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8õÀ†ú.

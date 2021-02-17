@@ -3,6 +3,7 @@ package andriy.kachur.dao.implementation;
 import andriy.kachur.config.DBManager;
 import andriy.kachur.dao.CarDao;
 import andriy.kachur.model.Car;
+import andriy.kachur.model.City;
 import andriy.kachur.model.Order;
 import andriy.kachur.service.OrderService;
 import andriy.kachur.service.implementation.OrderServiceImpl;
@@ -108,10 +109,12 @@ public class CarDaoImpl implements CarDao {
         List<Order> orders = orderService.getAllCarOrders(car);
         boolean result = true;
         for (Order o : orders) {
+            City shCity = orderService.getCityByName(o.getShippingAddress());
+            City desCity = orderService.getCityByName(o.getDestinationAddress());
             Calendar c = Calendar.getInstance();
             c.setTime(o.getDate());
             long millisInMinute = 60000;
-            Date dateAfterAddHalfHour = new Date(c.getTimeInMillis() + (30 * millisInMinute));
+            Date dateAfterAddHalfHour = new Date((c.getTimeInMillis() + ((long) orderService.distance(shCity.getLatitude(),shCity.getLongitude(),desCity.getLatitude(),desCity.getLongitude()) * millisInMinute)));
             if (new Date().after(dateAfterAddHalfHour)) {
                 result = true;
             } else {

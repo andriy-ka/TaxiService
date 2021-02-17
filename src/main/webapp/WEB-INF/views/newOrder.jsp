@@ -13,13 +13,21 @@
             <tr>
                 <td>From</td>
                 <td>
-                    <input type="text" name="shippingAddress" required>
+                    <select name="shippingAddress" id="shippingAddress">
+                        <c:forEach var="city" items="${requestScope.cities}">
+                            <option value="${city.name}">${city.name}</option>
+                        </c:forEach>
+                    </select>
                 </td>
             </tr>
             <tr>
                 <td>To</td>
                 <td>
-                    <input type="text" name="destinationAddress" required>
+                    <select name="destinationAddress" id="destinationAddress">
+                        <c:forEach var="city" items="${requestScope.cities}">
+                            <option value="${city.name}">${city.name}</option>
+                        </c:forEach>
+                    </select>
                 </td>
             </tr>
             <tr>

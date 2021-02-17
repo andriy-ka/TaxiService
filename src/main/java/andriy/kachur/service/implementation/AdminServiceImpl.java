@@ -13,26 +13,6 @@ public class AdminServiceImpl implements AdminService {
     private AdminDaoImpl adminDao = new AdminDaoImpl();
 
     @Override
-    public List<Order> sortByDate(String order) throws SQLException {
-        return adminDao.sortByDate(order);
-    }
-
-    @Override
-    public List<Order> sortByPrice(String order) throws SQLException {
-        return adminDao.sortByPrice(order);
-    }
-
-    @Override
-    public List<Order> findOrdersByUser(User user) throws SQLException {
-        return adminDao.findOrdersByUser(user);
-    }
-
-    @Override
-    public List<Order> findOrdersByDate(Date date) {
-        return adminDao.findOrdersByDate(date);
-    }
-
-    @Override
     public User getUserById(int id) {
         return adminDao.getUserById(id);
     }
@@ -55,5 +35,10 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public String getRole(int role_id) {
         return adminDao.getRole(role_id);
+    }
+
+    @Override
+    public User getUser(String login) {
+        return adminDao.getUser(login);
     }
 }

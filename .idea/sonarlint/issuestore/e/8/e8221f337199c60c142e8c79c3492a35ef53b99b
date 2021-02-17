@@ -1,7 +1,17 @@
 
-Z	java:S106#"9Replace this use of System.out or System.err by a logger.(ß«“şÿÿÿÿ8üÛµßù.
-`
-java:S1128"CRemove this unused import 'org.apache.http.client.utils.DateUtils'.(ªÈÙ€8«ÑïŞù.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(éâ¢äúÿÿÿÿ8üˆßáù.
-Z	java:S106!"9Replace this use of System.out or System.err by a logger.(«šÜ¨ûÿÿÿÿ8üˆßáù.
-Z	java:S106""9Replace this use of System.out or System.err by a logger.(·‘¡şÿÿÿÿ8üˆßáù.
+b
+java:S1854"@Remove this useless assignment to local variable "orderService".(¤ìæ’ùÿÿÿÿ8ÃàÍ€ú.
+U	java:S106+"9Replace this use of System.out or System.err by a logger.(ì­èœ8€Çú.
+S
+java:S1481"1Remove this unused "orderService" local variable.(¤ìæ’ùÿÿÿÿ8ÃàÍ€ú.
+]	java:S125"<This block of commented-out lines of code should be removed.(âõˆÛøÿÿÿÿ8ÃàÍ€ú.
+b
+java:S1854"@Remove this useless assignment to local variable "adminService".(âô”şúÿÿÿÿ8ÃàÍ€ú.
+S
+java:S1481"1Remove this unused "adminService" local variable.(âô”şúÿÿÿÿ8ÃàÍ€ú.
+\
+java:S1854":Remove this useless assignment to local variable "carDao".(œ¡Æ¢ùÿÿÿÿ8ß¥£ú.
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(ì­èœ8×¢¬ú.
+]	java:S125$"<This block of commented-out lines of code should be removed.(Ù¼£—ıÿÿÿÿ8ß¥£ú.
+M
+java:S1481"+Remove this unused "carDao" local variable.(œ¡Æ¢ùÿÿÿÿ8ß¥£ú.
