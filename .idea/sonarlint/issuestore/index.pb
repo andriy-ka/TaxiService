@@ -67,3 +67,7 @@ v
 Fsrc/main/java/andriy/kachur/service/implementation/CarServiceImpl.java,a\a\aaf643852fa5af6ca3cff6bb549614fdc0bae10d
 e
 5src/main/java/andriy/kachur/filter/CharsetFilter.java,9\d\9dbd7317fb585a121493620b7977bbb7c17163ed
+[
++src/main/java/andriy/kachur/model/City.java,6\a\6a522260ee6e972a9de37424cf1a02d4a5140861
+a
+1src/main/webapp/WEB-INF/views/confirmNewOrder.jsp,5\f\5f5f086f001d0aa5938abf0aa7659358e9d85b5c

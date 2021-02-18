@@ -1,6 +1,6 @@
 
-U	java:S106"9Replace this use of System.out or System.err by a logger.(¾À­ñ8âË¢ã÷.
-U	java:S106U"9Replace this use of System.out or System.err by a logger.(ºÿšã8Ù­’“ù.
 m	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±òê‹8¿‡Õã÷.
 †
 java:S1192("dDefine a constant instead of duplicating this literal "SELECT * FROM users where login = '" 3 times.(¿˜Üµýÿÿÿÿ8• ½†ú.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¾À­ñ8âË¢ã÷.
+U	java:S106U"9Replace this use of System.out or System.err by a logger.(ºÿšã8Ù­’“ù.

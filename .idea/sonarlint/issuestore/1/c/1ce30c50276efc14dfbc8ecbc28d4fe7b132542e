@@ -1,14 +1,18 @@
 
-r	java:S117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¤şüÿÿÿÿ8Çİµ¸ù.
-‡
-java:S1989)"jHandle the following exceptions that could be thrown by "buttonController": IOException, ServletException.(¬¶á8›¾‰“ù.
+r	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¤şüÿÿÿÿ8ÛÓØ§û.
+d
+java:S11924"GDefine a constant instead of duplicating this literal "cities" 5 times.(êÌ¥ë8÷ò³¨û.
 u
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÆÎã‰8›¾‰“ù.
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÆÎã‰8›¾‰“ù.
 z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8›¾‰“ù.
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8›¾‰“ù.
+k
+java:S1192V"IDefine a constant instead of duplicating this literal "category" 4 times.(Èšœãùÿÿÿÿ8’“à§û.
 ~
-java:S1989$"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8›¾‰“ù.
+java:S1989%"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8›¾‰“ù.
 ~
-java:S11929"\Define a constant instead of duplicating this literal "/WEB-INF/views/newOrder.jsp" 4 times.(üØÀöùÿÿÿÿ8Ê«ÿù.
+java:S11925"\Define a constant instead of duplicating this literal "/WEB-INF/views/newOrder.jsp" 5 times.(üØÀöùÿÿÿÿ8’“à§û.
+‡
+java:S1989*"jHandle the following exceptions that could be thrown by "buttonController": IOException, ServletException.(¬¶á8›¾‰“ù.
 z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(âô”şúÿÿÿÿ8›¾‰“ù.
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¤ìæ’ùÿÿÿÿ8›¾‰“ù.

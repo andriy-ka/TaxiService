@@ -189,6 +189,7 @@ public class OrderDaoImpl implements OrderDao {
         }
         return city;
     }
+
     @Override
     public double distance(double lat1, double lon1, double lat2, double lon2) {
         double theta = lon1 - lon2;

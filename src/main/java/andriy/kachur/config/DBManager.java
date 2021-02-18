@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBManager {
     private static DBManager dbManager;
-    private static String url = "jdbc:mysql://localhost:3306/tsdb?user=root&password=1234&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private static String url = "jdbc:mysql://localhost:3306/tsdb?user=root&password=1234&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=EET";
     private Connection con;
 
     private DBManager() {
