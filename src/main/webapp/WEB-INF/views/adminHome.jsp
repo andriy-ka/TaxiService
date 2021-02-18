@@ -1,3 +1,6 @@
+<%@ page import="andriy.kachur.service.AdminService" %>
+<%@ page import="andriy.kachur.model.Order" %>
+<%@ page import="andriy.kachur.service.implementation.AdminServiceImpl" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>
@@ -28,6 +31,7 @@
         <thead>
         <tr>
             <th>Id</th>
+            <th>User Name</th>
             <th>From</th>
             <th>To</th>
             <th>Passengers</th>
@@ -42,6 +46,7 @@
         <c:forEach var="order" items="${requestScope.orders}">
             <tr>
                 <td><c:out value="${order.id}"/></td>
+                <td><c:out value='<%= new AdminServiceImpl().getUserById(((Order) pageContext.getAttribute("order")).getUser_id()).getLogin()%>'/></td>
                 <td><c:out value="${order.shippingAddress}"/></td>
                 <td><c:out value="${order.destinationAddress}"/></td>
                 <td><c:out value="${order.numberOfPassengers}"/></td>

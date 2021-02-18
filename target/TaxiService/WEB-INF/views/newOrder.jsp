@@ -52,7 +52,7 @@
         <input type="submit" name="submitOrder" value="Submit">
     </form>
 </div>
-<div>
+<div align="center">
     <c:choose>
         <c:when test="${requestScope.numberOfCarByPlaces == 0}">
             <div style="color: red">Sorry, but now we dont have car with this number of places, now.</div>
