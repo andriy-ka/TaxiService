@@ -55,6 +55,7 @@ public class HomeServlet extends HttpServlet {
             getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
         }
         if (req.getParameter("newOrder") != null) {
+            req.setAttribute("name", req.getSession().getAttribute("name"));
             req.setAttribute("cities", orderService.getAllCities());
             getServletContext().getRequestDispatcher("/WEB-INF/views/newOrder.jsp").forward(req, resp);
         }

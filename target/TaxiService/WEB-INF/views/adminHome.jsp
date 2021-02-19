@@ -7,29 +7,50 @@
 <html>
 <head>
     <title>AdminHome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
-<div align="center">
-    <h1>Admin ${requestScope.name}, Hello!</h1>
-    <div>Sort by date:
+<nav class="navbar navbar-inverse bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="home">Taxi Service</a>
+        </div>
+        <ul class="navbar navbar-nav navbar-center">
+            <p class="navbar-text my-2 my-sm-0 mb-0 h1">Admin ${requestScope.name}, Hello!</p>
+        </ul>
+        <ul class="navbar navbar-nav navbar-right">
+            <li>
+                <form action="home" method="post" class="my-2 my-lg-0">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit" value="logout" name="logout">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" align="center">
+    <div>
+        <p class="h5">Sort by date</p>
         <form action="adminHome" method="get">
-            <input type="submit" name="sort" value="Desc">
-            <input type="submit" name="sort" value="Asc">
+            <button class="btn btn-lg btn-success" name="sort" value="Desc">Desc</button>
+            <button class="btn btn-lg btn-success" name="sort" value="Asc">Asc</button>
         </form>
     </div>
-    <div>
+        <p class="h5">Find by login</p>
         <form action="adminHome" method="get">
-            <input type="text" name="userLogin">
+            <input type="text" placeholder="Search by login" name="userLogin">
+            <button class="btn btn-success" type="submit">Search</button>
         </form>
-        Choose date:
+        <p class="h5">Choose date</p>
         <form action="adminHome" method="get">
             <input type="date" name="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
-            <input type="submit">
+            <button class="btn btn-lg btn-success" type="submit">Search</button>
         </form>
-    </div>
-    <table border="1">
+    <div class="container" align="center">
+    <table border="1" class="table table-striped table-bordered">
         <thead>
-        <tr>
+        <tr class="thead-dark">
             <th>Id</th>
             <th>User Name</th>
             <th>From</th>
@@ -58,12 +79,8 @@
             </tr>
         </c:forEach>
         </tbody>
-
     </table>
-
-    <form action="home" method="post">
-        <input type="submit" name="logout" value="logout">
-    </form>
+    </div>
 </div>
 </body>
 </html>

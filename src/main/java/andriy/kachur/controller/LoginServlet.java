@@ -26,6 +26,11 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(req.getParameter("register") != null){
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/registration.jsp");
+            dispatcher.forward(req, resp);
+        }
+
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         HttpSession session = req.getSession();

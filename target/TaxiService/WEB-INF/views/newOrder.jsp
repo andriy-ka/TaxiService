@@ -4,12 +4,31 @@
 <html>
 <head>
     <title>New Order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<div align="center">
-    <h1>Make your order</h1>
+<nav class="navbar navbar-inverse bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="home">Taxi Service</a>
+        </div>
+        <ul class="navbar navbar-nav navbar-center">
+            <p class="navbar-text my-2 my-sm-0 mb-0 h1">${requestScope.name} make your order</p>
+        </ul>
+        <ul class="navbar navbar-nav navbar-right">
+            <li>
+                <form action="home" method="post" class="my-2 my-lg-0">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit" value="logout" name="logout">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" align="center">
+    <h2>Please fill the fields</h2>
     <form action="home" method="post">
-        <table>
+        <table  class="h5" class="table table-striped table-bordered">
             <tr>
                 <td>From</td>
                 <td>
@@ -49,10 +68,10 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" name="submitOrder" value="Submit">
+        <button class="btn btn-lg btn-success" name="submitOrder">Submit</button>
     </form>
 </div>
-<div align="center">
+<div align="center" class="h5">
     <c:choose>
         <c:when test="${requestScope.numberOfCarByPlaces == 0}">
             <div style="color: red">Sorry, but now we dont have car with this number of places, now.</div>
@@ -68,11 +87,11 @@
         </c:when>
     </c:choose>
 </div>
-<div align="center">
+<div align="center" class="container">
     <c:choose>
     <c:when test="${requestScope.confirmNewOrder == 0}">
-        <div style="color: green">Confirm your order</div>
-        <table border="1">
+        <div class="h5">Confirm your order</div>
+        <table border="1" class="table table-striped table-bordered">
             <thead>
             <tr>
                 <th>From</th>
@@ -95,13 +114,12 @@
             </tr>
             </tbody>
             <form action="home" method="post">
-                <input type="submit" name="confirmNewOrder" value="Confirm">
-                <input type="submit" name="denyNewOrder" value="Deny">
+                <button class="btn btn-lg btn-success" type="submit" name="confirmNewOrder">Confirm</button>
+                <button class="btn btn-lg btn-danger" type="submit" name="denyNewOrder">Deny</button>
             </form>
         </table>
     </c:when>
     </c:choose>
 </div>
-
 </body>
 </html>
